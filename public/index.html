@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent - Question Answerer</title>
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="shortcut icon" href="web.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-container">
+            <div class="header">
+                <h1>🤖 AI Agent</h1>
+                <p>Ask me anything - I'll search the web and provide answers</p>
+            </div>
+
+            <div class="chat-box" id="chatBox">
+                <div class="message bot-message">
+                    <p>Hello! I'm an AI agent powered by LLaMA. I can search the web and scrape data to answer your questions. What would you like to know?</p>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <form id="questionForm">
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="questionInput" 
+                            placeholder="Ask me anything..." 
+                            autocomplete="off"
+                            required
+                        >
+                        <button type="submit" id="sendBtn" class="send-btn">
+                            <span class="send-icon">➤</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="info-box">
+                <p>💡 <strong>Tips:</strong> Ask about current events, sports stats, news, or any real-time information.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/public/script.js"></script>
+</body>
+</html>
