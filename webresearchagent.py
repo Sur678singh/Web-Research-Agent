@@ -9,6 +9,8 @@ from langchain_core.prompts import PromptTemplate
 from pydantic import BaseModel
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
 load_dotenv()
 # make a llm
@@ -25,6 +27,13 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# *********************************Serve Frontend UI****************************
+app.mount("/public",StaticFiles(directory='public'),name='public')
+# get request from server
+@app.get("/")
+def serve_frontend():
+    return FileResponse("public/index.html")
 
 # ***************************************TOOLS***********************************
 # web search tool
