@@ -105,5 +105,5 @@ def ask(q: Query):
         return {
             "error": str(e)
         }
-result=agent_executor.invoke({'input':'Which team has Most orange Cap in IPL history and how much is this?'})
-print(result['output'])
+# result=agent_executor.invoke({'input':'Which team has Most orange Cap in IPL history and how much is this?'})
+# print(result['output'])
