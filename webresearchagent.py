@@ -66,7 +66,7 @@ Use the following format:
 
 Question: the input question you must answer
 IMPORTANT RULES:
-- If user say hi and hello so you only say `hello,how can i assist today` and not used any tools to generate answer.
+- If user say hi and hello so you only say `hello,how can i assist today`.
 - If the question involves current or real-time information, you MUST use tavily_search.
 - NEVER say "I don’t have real-time data" or "based on my knowledge cutoff".
 - ALWAYS generate clean search queries (no words like "past", "before knowledge cutoff", etc.)
@@ -114,5 +114,3 @@ def ask(q: Query):
         return {
             "error": str(e)
         }
-# result=agent_executor.invoke({'input':'Which team has Most orange Cap in IPL history and how much is this?'})
-# print(result['output'])
