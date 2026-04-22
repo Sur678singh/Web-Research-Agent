@@ -78,6 +78,7 @@ async function sendQuestion(question) {
         }
         
         const data = await response.json();
+        console.log("Response:", data);
         removeLoading();
         
         // Add bot response

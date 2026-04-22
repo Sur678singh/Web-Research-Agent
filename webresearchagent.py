@@ -14,7 +14,7 @@ from fastapi.responses import FileResponse
 
 load_dotenv()
 # make a llm
-llm=ChatGroq(model='llama-3.3-70b-versatile')
+llm=ChatGroq(model='llama-3.1-8b-instant')
 
 # fast api server for backend
 app = FastAPI()
@@ -95,14 +95,11 @@ agent_executor=AgentExecutor(agent=agent,tools=[web_scrape,tavilytool],verbose=T
 class Query(BaseModel):
     question: str
 
-@app.get("/")
-def home():
-    return {"message": "✅ Smart Web Research Agent Running"}
 
 @app.post("/ask")
 def ask(q: Query):
     try:
-        # ✅ IMPORTANT: use 'input'
+        # use 'input'
         result = agent_executor.invoke({"input": q.question})
 
         return {
