@@ -1,5 +1,5 @@
 // API configuration
-const API_URL = 'http://localhost:8000/ask'; 
+const API_URL = 'https://web-research-agent-eabm.onrender.com/ask';
 
 // Get DOM elements
 const chatBox = document.getElementById('chatBox');
