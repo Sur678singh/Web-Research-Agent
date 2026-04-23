@@ -14,7 +14,7 @@ from fastapi.responses import FileResponse
 
 load_dotenv()
 # make a llm
-llm=ChatGroq(model='llama-3.1-8b-instant')
+llm=ChatGroq(model='llama-3.3-70b-versatile')
 
 # fast api server for backend
 app = FastAPI()
